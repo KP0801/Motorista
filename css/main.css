@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Krub:wght@300;400;500&family=Rubik:wght@700&display=swap');
+body {
+    padding-top: 5rem;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.barraNav {
+background-color: #5C3287!important;
+height: 100px;
+}
+.colorletras{
+    color:#5C3287;
+
+}
+.letrasPrincipales{
+    
+    font-family: 'Rubik', sans-serif;
+    font-size: 60px;
+    margin-left: 60px;
+}
+.letrasSecundarias{
+    font-family: 'Krub', sans-serif;
+}
+.button1{
+    width: 300px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50px;
+    color: #5C3287!important;
+    font-size: 20px;
+    padding: 0px;
+    margin-right: 25px;
+    text-align: center;
+    font-family: 'Krub', sans-serif;
+    font-weight: 500;
+    line-height: 1.7;
+    
+}
+.button2 {
+    border-radius: 50px;
+    background-color: #440F71;
+    width: 180px;
+    font-family: 'Krub', sans-serif;
+}
+.button3 {
+    border-radius: 50px;
+    background-color: #440F71;
+    color:white;
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+    font-family: 'Krub', sans-serif;
+    margin-left: 50%!important;
+}
+.button4 {
+    border-radius: 50px;
+    background-color: #440F71;
+    color:white;
+    width: 150px;
+    height: 25px;
+    font-size: 10px;
+    font-family: 'Krub', sans-serif;
+    margin-left: 50%!important;
+}
+.border{
+    border: 3px!important;
+}
+#letras1{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 30px;
+    font-size: 45px;
+    color: #5C3287;
+    margin-left: 70px;
+}
+#letras2{
+    font-family: 'Krub', sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+    color: #5C3287;
+    margin-left: 70px;
+}
+#divInferior{
+    background-color: #5C3287;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    margin-top: 80px;
+}
+#close{
+ background-color: #5C3287;
+ color:white;
+ font-family: 'Krub', sans-serif;
+ border-radius: 20px;
+ width: 80px;
+ height: 25px;
+  padding: initial;
+}
+.bordeTarjeta{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+}
+.margen{
+    margin-left: 80% !important;
+}
+.margen2{
+    padding-left: 0%!important;
+}
+.margen3{
+    margin-right: 15px!important;
+    margin-left: 15px!important;
+}
+
+.texto-encima{
+    position: absolute;
+    left: 30px;
+    top: 200px;
+    font-family: 'Rubik';
+    font-size: 25px;
+}
+.header{
+    background-color: #5C3287!important;
+    font-family: 'Rubik', sans-serif!important;
+}
