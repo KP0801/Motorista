@@ -1,11 +1,11 @@
-.centro{
+.centro{  /*Este solo es para la primera pagina */
     display: block;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
-.footer{
+.footer{   /*Este solo es para la primera pagina */
 font-family:'Press Start 2P' ;
 width: 300px;
 height: 20px;
@@ -15,3 +15,56 @@ font-size: 20px;
 color: white;
 font-weight: 400;
 }
+.formulario{
+font-family: 'Press Start 2P';
+font-style: normal;
+color: #000000;
+}
+/*
+bg es para fijar la imagen en toda la pantalla   
+*/
+#bg{
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+
+}
+#bg img {
+    
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+  .rectangulo1{  /* Este ya son todos los rectangulos */
+    position: absolute;
+    width: 360px;
+    height: 600px;
+    margin-top: 20%;
+    background: #A8A7A7;
+    border-radius: 150px;
+  }
+  .rectangulo{    /* Este rectangulo solo es para el bienvenido */
+    position: absolute;
+    width: 360px;
+    height: 600px;
+    margin-top: 20%;
+    background: #A8A7A7;
+    border-radius: 150px;
+  }
+
+    .btn-primary{   /* Podes usar esto para todos los botones verdes , solo en el html si ajustales el tamanio  */ 
+      color: black ;
+      outline-color: black;
+      background-color: #5A993C;
+      border: 3px solid;
+      border-radius: 50px;
+      position: fixed;
+    }
+
