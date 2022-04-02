@@ -1,0 +1,45 @@
+
+
+body{
+    background-image: url('../img/Login.png');
+}
+
+.div-principal{
+    background-color: #A8A7A7;
+    Height: 38rem;
+    border-radius: 150px;
+    margin-top: 5rem;
+    padding-top: 8rem;
+}
+.btn-inicio{
+    border-radius: 50px;
+    background-color: #5A993C;
+    border-color: black;
+    height: 3rem;
+}
+.div-secundario{
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    background: #A8A7A7;
+    border-radius: 100px 100px 0px 0px;
+}
+.posicionLogo{
+    margin-left: 14rem;
+    margin-top: -1rem;
+}
+.categorias{
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulario{
+    background-color: #DBDBDB;
+    color: #5A993C;
+    border-radius: 50px;
+    position: absolute;
+    width: 85%;
+    height: 50px;
+    font-size: 20px;
+    
+}
