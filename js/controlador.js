@@ -1,88 +1,131 @@
-var usuario=[
-  {  nombre,
-    telefono,
-    correo:'',
-    password:'',
-  }
-   
-    
-  
-];
-var correo2;
-var password2;
+var usuario =
+{
+  nombre: 'Juan',
+  telefono: '48498',
+  correo: 'bihcho@gmail.com',
+  password: 'kevins',
+};
+
+var ordenes = {
+  restaurante: 'Mcdonalds',
+  dirrecion: 'col.Suyapa ,sector 3',
+  productos: [
+    {
+      nombreProducto: 'Duo Crispy',
+      precio: 129.00,
+    },
+    {
+      nombreProducto: 'Big Mac',
+      precio: 161.00,
+    }
+  ]
 
 
-var localStorage=Window.localStorage;
+
+}
+
+
+
+console.log(ordenes.productos[1].nombreProducto);
+var correo2 = " ";
+var password2 = " ";
+
+
+var localStorage = Window.localStorage;
 
 
 function guardarUsuario() {
- 
- usuario.nombre= document.getElementById('nombre').value;
-  usuario.telefono=document.getElementById('telefono').value;
-  usuario.correo=document.getElementById('correo').value;
-  usuario.password=document.getElementById('password').value;
+  var expReg = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  usuario.nombre = document.getElementById('nombre').value;
+  usuario.telefono = document.getElementById('telefono').value;
+  usuario.correo = document.getElementById('correo').value;
+  usuario.password = document.getElementById('password').value;
   console.log(usuario.nombre);
   console.log(usuario.password);
   console.log(usuario.correo);
+
+
+  var valido = expReg.test(usuario.correo);
+  if (valido) {
+
+  } else {
+    window.alert("Correo no valido");
+  }
+
+
 };
 
-function terminarRegistro(){
-  usuario.correo=document.getElementById('correo').value;
-  usuario.password=document.getElementById('password').value;
-  document.getElementById('terminarRegistro').innerHTML +=`
-  <div class="text-center col-12 mt-5 fw-bold " style="font-size: 2rem;">¡Ahora ya puedes disfrutar de Planet Express! </div>
-  <br>
-  <div class="mt-5" >
-    <img style="width: 50%; margin-left: 30%;" class="posicionLogo"src="img/planet express 1.png" >
-  </div>
+
  
-  <div id="inicio2" class=" col-12 mt-5 : fw-bold fs-3 " >
-  Tu usario es:   </div>
-  <div class="white-box " style="width: 20rem; margin-left: 0; height: 3rem;" >
-      <div class="fs-2" style="color: #5A993C;"> ${usuario.correo}</div>
-  </div>
-  
-  <div class=" col-12 mt-5 : fw-bold fs-3 " >
-      Tu contaseña  es:   </div>
-      <div class="white-box " style="width: 20rem; margin-left: 0; height: 3rem;" >
-          <div class="fs-2" style="color: #5A993C;"> ${usuario.password}</div>
-  <br>
-          <a href="login.html"><button type="button" class="btn btn-primary"  style=" width: 15rem; height: 3rem;  8rem; font-size: 20px; "  >
-        Comenzar!
-    </button></a>
-      </div>
-      
-   
-  `
-}
-terminarRegistro();
-
-function nombreInicio(){
-
-  document.getElementById('nombreInicio').innerHTML = `
-  <div  class=" text-center fw-bold mt-5" style="font-size: 3rem;"> Hola ${usuario.nombre}</div>
-  `
-
-}
-nombreInicio();
 
 
 
-function verificarLogin(){
+
+
+
+
+
+function verificarLogin() {
 
   correo2 = document.getElementById('correo2').value;
   password2 = document.getElementById('password2').value;
 
-  if (correo2==usuario.correo) {
+  if (correo2 == usuario.correo) {
 
-    if (password2==usuario.password) {
-        window.location.replace("inicio2.html")
-    }else{
+    if (password2 == usuario.password) {
+      window.location.replace("inicio2.html")
+    } else {
       window.alert("Contraseña incorrecta");
     }
 
-  }else{
+  } else {
     window.alert("Usuario incorrecto");
   }
 
+};
+
+function ordenesD() {
+
+  document.getElementById('ordenes').innerHTML = `
+  <div class="container-1">
+  <br>
+  <br>
+  <br>
+  <br>   
+<div class="fs-1 fw-bold"> 
+  Orden#1
+</div>
+<br>
+<div class="fs-3 fw-bold"> 
+  Empresa de compra:
+</div>
+<div class="fs-3 " style="color:#FFFFFE ;" >
+  ${ordenes.restaurante}
+</div>
+<br>
+<div class="fs-3 fw-bold"> 
+  Dirrecion de entrega:
+</div>
+<div class="fs-3 " style="color:#FFFFFE ;" >
+  ${ordenes.dirrecion}
+</div>
+<br>
+<div class="fs-3 fw-bold"> 
+  Producos a comprar:
+</div>
+<div class="fs-3 " style="color:#FFFFFE ;" >
+  ${ordenes.productos[0].nombreProducto} : ${ordenes.productos[0].precio}lps
+  
+</div>
+<div class="fs-3 " style="color:#FFFFFE ;" >
+  ${ordenes.productos[1].nombreProducto} : ${ordenes.productos[1].precio}lps
+</div>
+<br>
+<div class="fs-3 fw-bold"> 
+  Subtotal--------${ordenes.productos[0].precio}+${ordenes.productos[1].precio}
+</div>
+  `
 }
+ordenesD();
+
+

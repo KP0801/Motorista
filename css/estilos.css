@@ -20,7 +20,7 @@ body{
 .div-secundario{
     position: absolute;
     width: 100%;
-    height: 50rem;
+    height: 58rem;
     background: #A8A7A7;
     border-radius: 100px 100px 0px 0px;
 }
@@ -75,11 +75,24 @@ body{
         background-color: #5A993C !important ;
         border: 3px solid !important ;
         border-radius: 50px !important ;
-        position: fixed !important ;
+        position: relative !important ;
       }
   .fotosInicio{
       width: 7rem;
     
 
   }
-  
+  .card{
+    width: 100% !important;
+    height: 10%!important;
+    border-radius: 30px;
+    background-color:#dbdbdbda!important ;
+  }
+  .container-1{
+      display: flex;
+    flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+  }
