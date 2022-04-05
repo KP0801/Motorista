@@ -49,6 +49,7 @@ bg es para fijar la imagen en toda la pantalla
     margin-top: 20%;
     background: #A8A7A7;
     border-radius: 150px;
+    margin-left: 1rem;
   }
   .rectangulo{    /* Este rectangulo solo es para el bienvenido */
     position: absolute;
@@ -60,7 +61,7 @@ bg es para fijar la imagen en toda la pantalla
   }
 
     .btn-primary{   /* Podes usar esto para todos los botones verdes , solo en el html si ajustales el tamanio  */ 
-      color: black ;
+      color: black  ; 
       outline-color: black;
       background-color: #5A993C;
       border: 3px solid;
