@@ -1,9 +1,9 @@
 var usuario =
 {
-  nombre: 'Juan',
-  telefono: '48498',
-  correo: 'bihcho@gmail.com',
-  password: 'kevins',
+  nombre: '',
+  telefono: '',
+  correo: '',
+  password: '',
 };
 
 var ordenes = {
@@ -35,7 +35,7 @@ var localStorage = Window.localStorage;
 
 
 function guardarUsuario() {
-  var expReg = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  
   usuario.nombre = document.getElementById('nombre').value;
   usuario.telefono = document.getElementById('telefono').value;
   usuario.correo = document.getElementById('correo').value;
@@ -43,14 +43,6 @@ function guardarUsuario() {
   console.log(usuario.nombre);
   console.log(usuario.password);
   console.log(usuario.correo);
-
-
-  var valido = expReg.test(usuario.correo);
-  if (valido) {
-
-  } else {
-    window.alert("Correo no valido");
-  }
 
 
 };
@@ -67,8 +59,8 @@ function guardarUsuario() {
 
 function verificarLogin() {
 
-  correo2 = document.getElementById('correo2').value;
-  password2 = document.getElementById('password2').value;
+  correo2 = document.getElementById('correo').value;
+  password2 = document.getElementById('password').value;
 
   if (correo2 == usuario.correo) {
 
