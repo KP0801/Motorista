@@ -19,7 +19,7 @@ body{
 }
 .div-secundario{
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 58rem;
     background: #A8A7A7;
     border-radius: 100px 100px 0px 0px;
@@ -95,4 +95,12 @@ body{
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
+  }
+  .rectangulo{
+    width: 90%;
+    height: 40rem;
+    background: #DBDBDB;
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-left: 5%;
   }

@@ -1,6 +1,7 @@
 var usuario =
 {
   nombre: '',
+  apellido:'',
   telefono: '',
   correo: '',
   password: '',
@@ -37,6 +38,7 @@ var localStorage = Window.localStorage;
 function guardarUsuario() {
   
   usuario.nombre = document.getElementById('nombre').value;
+  usuario.apellido= document.getElementById('apellido').value;
   usuario.telefono = document.getElementById('telefono').value;
   usuario.correo = document.getElementById('correo').value;
   usuario.password = document.getElementById('password').value;
@@ -75,49 +77,5 @@ function verificarLogin() {
   }
 
 };
-
-function ordenesD() {
-
-  document.getElementById('ordenes').innerHTML = `
-  <div class="container-1">
-  <br>
-  <br>
-  <br>
-  <br>   
-<div class="fs-1 fw-bold"> 
-  Orden#1
-</div>
-<br>
-<div class="fs-3 fw-bold"> 
-  Empresa de compra:
-</div>
-<div class="fs-3 " style="color:#FFFFFE ;" >
-  ${ordenes.restaurante}
-</div>
-<br>
-<div class="fs-3 fw-bold"> 
-  Dirrecion de entrega:
-</div>
-<div class="fs-3 " style="color:#FFFFFE ;" >
-  ${ordenes.dirrecion}
-</div>
-<br>
-<div class="fs-3 fw-bold"> 
-  Producos a comprar:
-</div>
-<div class="fs-3 " style="color:#FFFFFE ;" >
-  ${ordenes.productos[0].nombreProducto} : ${ordenes.productos[0].precio}lps
-  
-</div>
-<div class="fs-3 " style="color:#FFFFFE ;" >
-  ${ordenes.productos[1].nombreProducto} : ${ordenes.productos[1].precio}lps
-</div>
-<br>
-<div class="fs-3 fw-bold"> 
-  Subtotal--------${ordenes.productos[0].precio}+${ordenes.productos[1].precio}
-</div>
-  `
-}
-ordenesD();
 
 
