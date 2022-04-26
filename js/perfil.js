@@ -1,5 +1,5 @@
 
-   var motoristas=[];
+   var motorista=[];
 
 
 
@@ -10,7 +10,7 @@
         responseType:'json'
 
       }) .then(res=>{
-        console.log(res);
+        
         this.motoristas = res.data;
         
         imprimirPerfil();
@@ -18,7 +18,8 @@
         
     }).catch(error=>{
         console.error(error);
-        console.log(JSON.stringify(motoristas.nombreMotorista));
+        
+        
     })
 
 
@@ -65,4 +66,3 @@ function imprimirPerfil(){
     `;
   
   }
-  imprimirPerfil();

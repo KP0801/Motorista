@@ -69,6 +69,7 @@ function ordenesD() {
     Subtotal--------${ordenes.productos[0].precio}+${ordenes.productos[1].precio}
    </div>
     `
+    
    document.getElementById('ordenes').innerHTML=stringHTML;
   }
    ordenesD();
