@@ -1,7 +1,7 @@
 
 function login(){
     $.ajax({
-        url:'../../../Backend/api/login-motorista.php',
+        url:'../../Backend/api/login-motorista.php',
         method:'post',
         data:JSON.stringify({
            correo:document.getElementById('correo').value,
@@ -29,13 +29,9 @@ function login(){
 
 
 function guardar(){
-    let=cantidad=0;
-    let id;
-    let txtnombre=document.getElementById('nombre').value;
-    let txtapellido=document.getElementById('apellido').value;
-    let txtcorreo=document.getElementById('correo').value;
-    let txtcontrasena=document.getElementById('password').value;
-
+    let cantidad=null;
+    let id=null;
+    
 
     $.ajax({
         url:'../../../Backend/api/motoristas.php',
@@ -53,22 +49,28 @@ function guardar(){
     $.ajax({
         url:'../../../Backend/api/motoristas.php',
         method:'post',
-        data: {
-            nombreMotorista:txtnombre,
-            apellidoMotorista:txtapellido,
-            correo:txtcorreo,
-            contrasena:txtcontrasena
+        data:JSON.stringify({
+            idMotorista:id,
+            nombreMotorista:document.getElementById('nombre').value,
+            apellidoMotorista:document.getElementById('apellido').value,
+            correo:document.getElementById('correo').value,
+            contrasena:document.getElementById('password').value,
+            
 
-        },
+        }),
         dataType:'json',
         success:function(res){
                 console.log("guardado con exito");
-            
+
+            if(res.codigoResultado==1){
+                window.location.href="terminarRegistro.html"
+            }
+            console.log(res)
         },
         error:function(error){
             console.error(error);
         }
-    })
+    });
 
             window.location.href="terminarRegistro.html"
         
@@ -78,6 +80,6 @@ function guardar(){
             console.error(error);
             
         }
-    })
+    });
 
 }

@@ -6,7 +6,7 @@
    function obtenerMotorista(){
       axios({
         method:'GET',
-        url:'../../../Backend/api/motoristas.php',
+        url:'../../Backend/api/motoristas.php',
         responseType:'json'
 
       }) .then(res=>{

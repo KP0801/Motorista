@@ -29,7 +29,8 @@ var ordenes = {
 
 
 function ordenesD() {
-  
+   
+
     let stringHTML=`
     <div class="container-1">
     <br>
@@ -68,6 +69,14 @@ function ordenesD() {
    <div class="fs-3 fw-bold"> 
     Subtotal--------${ordenes.productos[0].precio}+${ordenes.productos[1].precio}
    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div><button class="btn btn-primary"  style="margin-left: 50% ; width: 100%;" > ACEPTAR ORDEN </button></div>
+
+
+
     `
     
    document.getElementById('ordenes').innerHTML=stringHTML;
